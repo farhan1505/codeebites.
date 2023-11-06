@@ -1,0 +1,272 @@
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #ff9f45;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.hero {
+    background-image: url('assets/banner.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 280px;
+    color: #fff; /* Ganti warna teks agar kontras dengan gambar latar belakang */
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: #000000;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #666;
+    margin: 20px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff4545;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer; /* Mengubah kursor saat dihover agar terlihat seperti tautan */
+}
+.cta-button:hover {
+    background-color: #ff7836; /* Mengubah warna latar belakang saat hover */
+    color: #fff; /* Mengubah warna teks saat hover */
+    transform: scale(1.05); /* Membesarkan tombol saat hover */
+    transition: transform 0.3s ease; /* Efek transisi saat hover */
+}
+/* Efek hover tombol "View Menu" */
+.specials {
+    background-color: #fff;
+    text-align: center;
+    padding: 40px;
+}
+/* Gaya card produk */
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Efek transisi saat hover */
+}
+/* Animasi hover untuk gambar */
+.product-card img:hover {
+    transform: translateY(-10px); /* Menggeser gambar ke atas saat hover */
+}
+
+.product-card h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+.product-card .price {
+    font-size: 20px;
+    color: #ff9f45;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Responsivitas card produk */
+@media (max-width: 768px) {
+    .product-card {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .product-card h3 {
+        font-size: 20px;
+    }
+
+    .product-card p {
+        font-size: 14px;
+    }
+
+    .product-card .price {
+        font-size: 18px;
+    }
+}
+
+
+/* Gaya about us section */
+.about-us {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 40px;
+    overflow: hidden;
+    transition: all 0.3s; /* Animasi efek transisi saat hover */
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image {
+    flex: 1;
+    padding: 20px;
+    opacity: 0; /* Mengatur opasitas awal menjadi 0 */
+    transform: translateY(20px); /* Mendorong gambar ke bawah */
+    transition: all 0.3s; /* Animasi efek transisi saat hover */
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 5px;
+    height: 200px;
+}
+
+.about-text {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Animasi saat hover */
+.about-us:hover {
+    background-color: #fff;
+}
+
+.about-us:hover .about-image {
+    opacity: 1; /* Membuat gambar muncul saat hover */
+    transform: translateY(0); /* Membalikkan transformasi */
+}
+
+
+/* Gaya Contact Us section */
+.contact {
+    background-color: #fff;
+    text-align: center;
+    padding: 40px;
+}
+
+.contact h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+.contact p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    font-size: 18px;
+    color: #333;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+/* Efek animasi saat hover pada nomor telepon dan tautan Instagram */
+.contact-info p:hover {
+    color: #ff9f45; /* Mengubah warna saat hover */
+    cursor: pointer; /* Mengubah kursor saat hover */
+    transition: color 0.3s; /* Efek transisi warna saat hover */
+}
+
+.contact-info p a:hover {
+    color: #ff9f45; /* Mengubah warna tautan Instagram saat hover */
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-top: 20px;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 40px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
